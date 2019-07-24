@@ -5,44 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stud</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script>
+    function getDetails()
+    {
+        var n=document.getElementById("name").value;
+        var b=document.getElementById("branch").value;
+        var d=document.getElementById("dob").value;
+        var a=document.getElementById("age").value;
+        var r=document.getElementById("rd").value;
+        var c=document.getElementById("check").value;
+        document.getElementById("1").innerHTML=n;
+        document.getElementById("2").innerHTML=b;
+        document.getElementById("3").innerHTML=d;
+        document.getElementById("4").innerHTML=a;
+        document.getElementById("5").innerHTML=r;
+        document.getElementById("6").innerHTML=c;
+
+
+    }
+
+
+</script>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>  Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Branch</td>
-            <td>
-                <select >
-                    <option value="">Computer Science</option>
-                    <option value="">Electrical</option>
-                    <option value="">Electronics</option>
+    <div class="card align-items-center" style="width: 25rem;">
+        <div class="card-body" >
+    
+        <table>
+            <tr>
+                <td>  Name</td>
+                <td><input type="text" class="form-control" id="name"></td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td>    
+                    <select  id="branch">
+                        <option value=""  class="form-control" id="branch">Computer Science</option>
+                        <option value="" class="form-control" id="branch">Electrical</option>
+                        <option value="" class="form-control" id="branch">Electronics</option>
                     
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Date of Birth</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>Age</td>
-            <td><input type="number" min="0" max="120"></td>
-        </tr>
-        <tr>
-            <td>Gender</td>
-            <td><input type="radio" name="gender">Male <input type="radio" name="gender">Female</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" >I agree to the terms and conditions</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button type="submit">SUBMIT</button></td>
-        </tr>
-    </table>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" class="form-control" id="dob"></td>
+            </tr>
+            <tr>    
+                <td>Age</td>
+                <td><input type="number" min="0" max="120" class="form-control" id="age"></td>
+            </tr>
+            <tr>    
+                <td>Gender</td>
+                <td><input type="radio" name="gender" id="rd">Male <input type="radio" name="gender" id="rd">Female</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" >I agree to the terms and conditions</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit"class="btn btn-success"  onclick="getDetails();">SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="1"></p>
+                    <p id="2"> </p>
+                    <p id="3"></p>
+                    <p id="4"></p>
+                    <p id="5"></p>
+                    <p id="6"></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
 </body>
 </html>

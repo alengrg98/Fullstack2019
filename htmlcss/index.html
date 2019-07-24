@@ -5,22 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function getNamenpass()
+        {
+            var n=document.getElementById("name").value;
+            var p=document.getElementById("pass").value;
+            document.getElementById("name2").innerHTML=n;
+            document.getElementById("pass2").innerHTML=p;
+        }
+    </script>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>username:</td>
-            <td><input type="input" /></td>
-        </tr>
-        <tr>
-            <td>password</td>
+ <div class="container">
+    <div class="row">
+    <div class="col col-12 col-sm-4" >
+    <div class="card align-items-center" style="width: 18rem;">
+        <div class="card-body" >
+            
+            <table>
+                <tr>
+                    <td>username:</td>
+                    <td><input type="text" class="form-control" id="name" /></td>
+                </tr>
+                <tr>
+                    <td>password</td>
 
-            <td><input type="password" name="" id="1"> </td>
-        </tr>
-        <tr>
-            <td>    </td>
-            <td>   <button>LOGIN</button> </td>
-        </tr>
-    </table>
+                    <td><input type="password" name="" id="pass" class="form-control"> </td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>   <button class="btn btn-success" onclick="getNamenpass();">LOGIN</button> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="name2"></p>
+                        <p id="pass2"></p>
+                    </td>
+                </tr>
+            </table>        
+
+        </div>  
+    </div>
+    </div>
+    </div>
+    </div>
+    
 </body>
 </html>

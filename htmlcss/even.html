@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Even</title>
+    <script>
+        function iseven()
+        {
+            var x=document.getElementById("num").value;
+            if(x%2!=0)
+            {
+                document.getElementById("result").innerHTML="ODD";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="EVEN";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter the number<input type="text" id="num"></p>
+    
+    <button type="button" onclick="iseven();"> Submit</button>
+    <p id="result"></p>
+</body>
+</html>
