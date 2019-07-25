@@ -74,14 +74,13 @@
                                    <td>
                                         <p >Number1<input id="num1"type="number" class="form-control"></p>
                                         <p >Number2<input id="num2"type="number" class="form-control"></p>
-                                        <p>Operator<select name="" id="op" class="form-control">
+                                        <p>Operator<select name="" id="op" class="form-control" onchange="operations();">
                                                 <option value="+">+</option>
                                                 <option value="-">-</option>
                                                 <option value="*">*</option>
                                                 <option value="/">/</option>
                                             </select>
                                             </p>
-                                        <button type="button" class="btn btn-success" onclick="operations();">Submit</button>
                                    </td>
                                </tr>
                                <tr>
