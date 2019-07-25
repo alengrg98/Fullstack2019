@@ -13,7 +13,15 @@
         var b=document.getElementById("branch").value;
         var d=document.getElementById("dob").value;
         var a=document.getElementById("age").value;
-        var r=document.getElementById("rd").value;
+        var r;
+        if(document.getElementById("male").checked){
+            r=document.getElementById("male").value;
+        }
+        else if(document.getElementById("female").checked)
+    {
+        r=document.getElementById("female").value;
+        
+    }
         var c=document.getElementById("check").value;
         document.getElementById("1").innerHTML=n;
         document.getElementById("2").innerHTML=b;
@@ -29,56 +37,64 @@
 </script>
 </head>
 <body>
-    <div class="card align-items-center" style="width: 25rem;">
-        <div class="card-body" >
-    
-        <table>
-            <tr>
-                <td>  Name</td>
-                <td><input type="text" class="form-control" id="name"></td>
-            </tr>
-            <tr>
-                <td>Branch</td>
-                <td>    
-                    <select  id="branch">
-                        <option value=""  class="form-control" id="branch">Computer Science</option>
-                        <option value="" class="form-control" id="branch">Electrical</option>
-                        <option value="" class="form-control" id="branch">Electronics</option>
-                    
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Date of Birth</td>
-                <td><input type="date" class="form-control" id="dob"></td>
-            </tr>
-            <tr>    
-                <td>Age</td>
-                <td><input type="number" min="0" max="120" class="form-control" id="age"></td>
-            </tr>
-            <tr>    
-                <td>Gender</td>
-                <td><input type="radio" name="gender" id="rd">Male <input type="radio" name="gender" id="rd">Female</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" id="check" >I agree to the terms and conditions</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="submit"class="btn btn-success"  onclick="getDetails();">SUBMIT</button></td>
-            </tr>
-            <tr>
-                <td>
-                    <p id="1"></p>
-                    <p id="2"> </p>
-                    <p id="3"></p>
-                    <p id="4"></p>
-                    <p id="5"></p>
-                    <p id="6"></p>
-                </td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                    <div class="card align-items-center" style="width: 25rem;">
+                            <h5 class="card-header">Student Details</h5>
+                            <div class="card-body" >
+                                
+                            <table>
+                                <tr>
+                                    <td>  Name</td>
+                                    <td><input type="text" class="form-control" id="name"></td>
+                                </tr>
+                                <tr>
+                                    <td>Branch</td>
+                                    <td>    
+                                        <select  id="branch">
+                                            <option value="Computer Science"  class="form-control" >Computer Science</option>
+                                            <option value="Electrical" class="form-control" >Electrical</option>
+                                            <option value="Electronics" class="form-control" >Electronics</option>
+                                        
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td><input type="date" class="form-control" id="dob"></td>
+                                </tr>
+                                <tr>    
+                                    <td>Age</td>
+                                    <td><input type="number" min="0" max="120" class="form-control" id="age"></td>
+                                </tr>
+                                <tr>    
+                                    <td>Gender</td>
+                                    <td><input type="radio" name="gender" id="male" value="Male">Male <input type="radio" name="gender" id="female" value="Female">Female</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="check" >I agree to the terms and conditions</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="submit"class="btn btn-success"  onclick="getDetails();">SUBMIT</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p id="1"></p>
+                                        <p id="2"> </p>
+                                        <p id="3"></p>
+                                        <p id="4"></p>
+                                        <p id="5"></p>
+                                        <p id="6"></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+            </div>
         </div>
     </div>
+
 </body>
 </html>

@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Largest Number</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
         function largest()
         {
         var x=document.getElementById("num1").value;
         var y=document.getElementById("num2").value;
-        if(x>y){
+        var a=parseInt(x);
+        var b=parseInt(y);
+        if(a>b){
             document.getElementById("result").innerHTML=x;
 
          }
@@ -24,10 +27,23 @@
     </script>
 </head>
 <body>
-        <p>Number1<input type="text" id="num1"></p>
-        <p>Number2<input type="text" id="num2"></p>
-        <button type="button" onclick="largest();"> Find largest</button>
-        <p id="result"> </p>
+        <div class="container">
+                <br>
+                <div class="row">
+                    <div class="col col-12 col-sm-6">
+                        <div class="card">
+                            <h5 class="card-header">Largest Number</h5>
+        
+                            <div class="card-body ">
+                                    <p>Number1<input type="number" id="num1"></p>
+                                    <p>Number2<input type="number" id="num2"></p>
+                                    <button type="button" onclick="largest();"> Find largest</button>
+                                    <p id="result"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     
 </body>

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Even</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
         function iseven()
         {
             var x=document.getElementById("num").value;
-            if(x%2!=0)
+            var a=parseInt(x);
+
+            if(a%2!=0)
             {
                 document.getElementById("result").innerHTML="ODD";
             }
@@ -22,9 +25,22 @@
     </script>
 </head>
 <body>
-    <p>Enter the number<input type="text" id="num"></p>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">CHECK EVEN</h5>
+
+                    <div class="card-body ">
+                            <p>Enter the number<input type="number" id="num"></p>
     
-    <button type="button" onclick="iseven();"> Submit</button>
-    <p id="result"></p>
+                            <button type="button" onclick="iseven();"> Submit</button>
+                            <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
