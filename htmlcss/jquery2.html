@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){     //click
+          $('.hide').click(function(){
+                    $('.text1').hide(3000);
+          });
+          $('.show').dblclick(function(){       //doubleclick
+                $('.text1').show();
+          });
+      });
+        
+        
+      
+    </script>
+
+</head>
+<body>
+    
+    
+    <button type="button" class="show">SHOW ME</button><button type="button" class="hide">HIDE ME</button>
+    <h1 class="text1">FULL STACK COURSE</h1>
+</body>
+</html>

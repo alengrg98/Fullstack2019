@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('.click1').click(function(){
+            var x=$('#input1').val();           //read a value in jquery
+            //alert(x);
+              $('.text1').toggle();         //hide and show the specified id or class or tag within the ' '
+
+          })
+         
+      })
+        
+      
+    </script>
+
+</head>
+<body>
+    
+    
+  
+    <h1 class="text1">FULL STACK COURSE</h1>
+     <p> Enter a value <input type="text" id="input1"> </p>
+     <button type="button" class="click1">CLICK </button>
+</body>
+</html>
