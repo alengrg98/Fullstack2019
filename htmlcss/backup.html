@@ -1,0 +1,21 @@
+var  num=parseInt(document.getElementById("num1").value);
+function even(num,callback)
+{
+   
+    var results1="";
+    if(num%2==0)
+        {
+            results1="even";
+        }
+    else
+        {
+            results1="odd";
+        }
+        callback(results1);
+    //console.log(results1);
+    
+}
+
+even(num,(res)=>{
+    document.getElementById("result").innerHTML=res;
+})
